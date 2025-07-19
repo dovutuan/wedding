@@ -32,7 +32,7 @@ if ! git ls-remote --exit-code --heads origin gh-pages > /dev/null; then
   git checkout --orphan gh-pages
   git reset --hard
   git commit --allow-empty -m "Init gh-pages"
-  git push origin deployed
+  git push origin gh-pages
   git checkout "$CURRENT_BRANCH"
   print_done "'gh-pages' branch created."
 else
