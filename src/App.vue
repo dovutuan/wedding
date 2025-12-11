@@ -6,9 +6,12 @@ import DetailComponent from '@/components/Detail.vue';
 import StoryComponent from '@/components/Story.vue';
 import SaveTheDateComponent from '@/components/SaveTheDate.vue';
 import HeaderComponent from '@/components/Header.vue';
+import InvitationPopup from '@/components/InvitationPopup.vue';
 </script>
 
 <template>
+  <invitation-popup/>
+
   <!-- Hero Section -->
   <header-component/>
 
