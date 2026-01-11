@@ -36,6 +36,7 @@ const closeImage = () => {
              :key="index"
              class="relative overflow-hidden rounded-lg image-zoom card-hover cursor-pointer"
              data-aos="zoom-in"
+             @click="openImage(img)"
              :data-aos-delay="(index % 3) * 100">
           <img :src="img"
                :alt="`Gallery ${index + 1}`"
