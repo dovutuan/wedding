@@ -52,7 +52,10 @@ const isWeddingDay = (day) => {
                :key="day"
                class="h-10 flex items-center justify-center relative rounded"
                :class="isWeddingDay(day) && 'bg-primary/10'">
-            <span :class="isWeddingDay(day) && 'font-bold text-red'">{{ day }}</span>
+            <span
+                :class="isWeddingDay(day) && 'font-bold text-red-500 border border-red-400 rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center'">{{
+                day
+              }}</span>
 
             <svg v-if="isWeddingDay(day)"
                  class="absolute -top-1 -right-1 w-4 h-4 text-primary"
