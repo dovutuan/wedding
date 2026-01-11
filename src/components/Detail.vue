@@ -10,7 +10,7 @@ defineComponent({name: 'DetailComponent'});
     <div class="container mx-auto px-6">
       <div class="text-center mb-14" data-aos="fade-up">
         <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Thông Tin Lễ Cưới</h2>
-        <div class="w-20 h-px bg-primary mx-auto mb-6"></div>
+        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
         <p class="max-w-2xl mx-auto">Chúng tôi rất hân hạnh được chào đón bạn đến dự lễ cưới của chúng tôi</p>
       </div>
 

@@ -16,7 +16,7 @@ const SHORT_ADDRESS = 'Kiến Xương, Thái Bình'
 
 const WEDDING_LOCATIONS = [
     {
-        TITLE: 'Nhà trai',
+        TITLE: 'Tại tư gia nhà trai',
         TIME: `${WEDDING_TIME} ngày, ${WEDDING_DATE}`,
         LOCATION_NAME: 'Tư gia chú rể',
         ADDRESS: 'xóm 5, thôn Khả Phú, xã Bình Thanh, Huyện Kiến Xương, tỉnh Thái Bình',
@@ -24,7 +24,7 @@ const WEDDING_LOCATIONS = [
         MAP_LINK: 'https://maps.app.goo.gl/ZaBNBGFRq3CgNc2T7',
     },
     {
-        TITLE: 'Nhà gái',
+        TITLE: 'Tại tư gia nhà gái',
         TIME: `${WEDDING_TIME} ngày, ${WEDDING_DATE}`,
         LOCATION_NAME: 'Tư gia cô dâu',
         ADDRESS: 'xóm 5, xã Hồng Tiến, Huyện Kiến Xương, tỉnh Thái Bình',

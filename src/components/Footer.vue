@@ -11,7 +11,7 @@ defineComponent({name: 'FooterComponent'});
     <div class="container mx-auto px-6">
       <div class="text-center mb-8" data-aos="zoom-in">
         <h2 class="font-great-vibes tracking-widest text-3xl md:text-4xl mb-4 animate__animated animate__fadeIn">{{ GROOM.SHORT }}  &  {{ BRIDE.SHORT }}</h2>
-        <div class="w-20 h-px bg-primary mx-auto mb-6 animate__animated animate__fadeIn animate__delay-1s"></div>
+        <div class="w-40 h-px bg-primary mx-auto mb-6 animate__animated animate__fadeIn animate__delay-1s"></div>
         <p class="max-w-2xl mx-auto animate__animated animate__fadeIn animate__delay-2s">{{ format(parse(WEDDING_DATE, FORMAT_DATE, new Date()), FORMAT_WEDDING_DATE) }}</p>
       </div>
 

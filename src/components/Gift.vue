@@ -25,11 +25,11 @@ const copyAccount = async (number) => {
       <!-- Header -->
       <div class="text-center mb-14" data-aos="fade-up">
         <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">
-          Gửi quà mừng tới Cô Dâu & Chú Rể
+          Gửi quà mừng tới Chú Rể & Cô Dâu
         </h2>
-        <div class="w-20 h-px bg-primary mx-auto mb-6"></div>
+        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
         <p class="max-w-2xl mx-auto text-gray-600">
-          Sự hiện diện của bạn là niềm vinh hạnh lớn nhất. Nếu có thể, bạn có thể gửi quà mừng theo thông tin bên dưới.
+          Sự hiện diện của bạn là niềm vinh hạnh lớn nhất. Trong trường hợp không thể đến dự, bạn có thể gửi quà mừng theo thông tin bên dưới.
         </p>
       </div>
 
@@ -63,9 +63,9 @@ const copyAccount = async (number) => {
           </div>
 
           <div class="text-center space-y-2">
-            <p><span class="font-medium">Ngân hàng:</span>{{ gift.BANK_NAME }}</p>
+            <p  class="font-medium text-lg">Ngân hàng: {{ gift.BANK_NAME }}</p>
 
-            <p class="font-mono text-lg tracking-wide">{{ gift.NUMBER }}</p>
+            <p class="font-medium text-lg tracking-wide">Stk: {{ gift.NUMBER }}</p>
 
             <button
                 class="inline-flex items-center gap-2 mt-3 px-4 py-2 text-sm rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition"

@@ -27,7 +27,7 @@ const closeImage = () => {
       <div class="text-center mb-14" data-aos="fade-up">
         <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Khoảnh Khắc
           Đẹp</h2>
-        <div class="w-20 h-px bg-primary mx-auto mb-6"></div>
+        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
         <p class="max-w-2xl mx-auto">Những khoảnh khắc đáng nhớ trong hành trình yêu nhau của chúng tôi</p>
       </div>
 

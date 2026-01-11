@@ -35,7 +35,7 @@ const isWeddingDay = (day) => {
   <section class="py-10">
     <div class="container mx-auto px-6 max-w-md text-center">
       <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Save the Date</h2>
-      <div class="w-20 h-px bg-primary mx-auto mb-6"></div>
+      <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
 
       <div class="bg-secondary rounded-xl shadow p-5">
         <div class="text-lg font-semibold uppercase mb-3">
