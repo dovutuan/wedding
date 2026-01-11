@@ -12,6 +12,7 @@ defineComponent({name: 'HeaderComponent'});
     <div class="absolute inset-0 z-0">
       <img src="@/assets/images/header.jpg"
            alt="Couple"
+           loading="lazy"
            class="w-full h-full object-cover object-center brightness-50">
     </div>
 

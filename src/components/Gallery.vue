@@ -64,7 +64,7 @@ const closeImage = () => {
       <div v-if="showViewer"
            class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
            @click="closeImage">
-        <img :src="activeImage" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl" :alt="activeImage"/>
+        <img :src="activeImage" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl" :alt="activeImage" loading="lazy"/>
 
         <button
             class="absolute text-white top-4 right-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 z-60 audio-pulse hover:glow"

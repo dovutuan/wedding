@@ -81,6 +81,7 @@ const copyAccount = async (number) => {
           <div class="mt-6 text-center">
             <img :src="gift.IMAGE"
                  :alt="gift.TITLE"
+                 loading="lazy"
                  class="mx-auto w-40 h-40 md:w-48 md:h-48 object-contain rounded-lg shadow hover:shadow-xl transition"/>
           </div>
         </div>
