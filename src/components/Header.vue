@@ -16,14 +16,11 @@ defineComponent({name: 'HeaderComponent'});
     </div>
 
     <div class="relative z-10 text-center px-6 text-white">
-      <p class="font-playfair tracking-widest mb-10 animate__animated animate__fadeIn text-2xl md:text-4xl lg:text-4xl">
-        Chúng tôi sắp
-      </p>
-      <h1 class="font-great-vibes text-6xl md:text-8xl lg:text-9xl mb-8 animate__animated animate__fadeIn animate__delay-1s font-bold">
+      <h1 class="font-great-vibes text-6xl md:text-8xl lg:text-9xl mb-8 animate__animated animate__fadeIn animate__delay-0.5s font-bold">
         Kết Hôn
       </h1>
 
-      <div class="flex items-center justify-center space-x-6 mb-12 animate__animated animate__fadeIn animate__delay-2s">
+      <div class="flex items-center justify-center space-x-6 mb-12 animate__animated animate__fadeIn animate__delay-1s">
         <div class="text-center">
           <p class="font-playfair text-lg uppercase tracking-widest">Chú Rể</p>
           <h3 class="text-2xl font-bold">{{ GROOM.DISPLAY }}</h3>
@@ -40,7 +37,7 @@ defineComponent({name: 'HeaderComponent'});
       <!-- Countdown Timer -->
       <countdown-timer-component/>
 
-      <div class="animate__animated animate__fadeIn animate__delay-4s">
+      <div class="animate__animated animate__fadeIn animate__delay-2s">
         <p class="font-playfair text-xl mb-2">
           {{ format(parse(WEDDING_DATE, FORMAT_DATE, new Date()), FORMAT_WEDDING_DATE) }}
         </p>

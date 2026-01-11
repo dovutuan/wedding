@@ -8,8 +8,8 @@ defineComponent({name: 'DetailComponent'});
 <template>
   <section id="detail" class="py-10">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold">Thông Tin Lễ Cưới</h2>
+      <div class="text-center mb-14" data-aos="fade-up">
+        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Thông Tin Lễ Cưới</h2>
         <div class="w-20 h-px bg-primary mx-auto mb-6"></div>
         <p class="max-w-2xl mx-auto">Chúng tôi rất hân hạnh được chào đón bạn đến dự lễ cưới của chúng tôi</p>
       </div>
@@ -17,10 +17,10 @@ defineComponent({name: 'DetailComponent'});
       <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         <div v-for="(location, index) in WEDDING_LOCATIONS"
              :key="index"
-             class="bg-gray-50 p-8 rounded-lg shadow-sm"
-             data-aos="fade-up" :data-aos-delay="index * 100">
+             class="bg-gray-50 p-8 rounded-lg shadow-sm card-hover"
+             data-aos="zoom-in" :data-aos-delay="index * 150">
           <div class="text-center mb-6">
-            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 hover:scale-110 hover:rotate-12 transition-all duration-300 cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
                    stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,7 +34,7 @@ defineComponent({name: 'DetailComponent'});
           <div class="text-center">
             <p class="text-gray-600 mb-4">{{ location.ADDRESS }}</p>
 
-            <div class="map-container mb-4">
+            <div class="map-container mb-4 hover:shadow-xl transition-shadow duration-300">
               <iframe
                   :src="location.MAP_EMBED_URL"
                   allowfullscreen=""
@@ -42,10 +42,10 @@ defineComponent({name: 'DetailComponent'});
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <a :href="location.MAP_LINK" target="_blank" class="text-primary hover:underline inline-flex items-center">
+            <a :href="location.MAP_LINK" target="_blank" class="text-primary hover:text-primary-dark hover:underline inline-flex items-center group transition-all duration-300">
               Xem bản đồ
               <svg xmlns="http://www.w3.org/2000/svg"
-                   class="h-4 w-4 ml-1"
+                   class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform duration-300"
                    fill="none"
                    viewBox="0 0 24 24"
                    stroke="currentColor">

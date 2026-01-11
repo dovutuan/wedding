@@ -6,31 +6,82 @@ import DetailComponent from '@/components/Detail.vue';
 import StoryComponent from '@/components/Story.vue';
 import SaveTheDateComponent from '@/components/SaveTheDate.vue';
 import HeaderComponent from '@/components/Header.vue';
+import AudioComponent from '@/components/Audio.vue';
+import GiftComponent from '@/components/Gift.vue';
 </script>
 
 <template>
-  <!-- Hero Section -->
-  <header-component/>
+  <div class="app-container">
+    <!-- Audio Section -->
+    <transition name="fade">
+      <audio-component/>
+    </transition>
 
-  <!-- Save the Date -->
-  <save-the-date-component/>
+    <!-- Hero Section -->
+    <header-component/>
 
-  <!-- Our Story -->
-  <story-component/>
+    <!-- Save the Date -->
+    <save-the-date-component/>
 
-  <!-- Wedding Details -->
-  <detail-component/>
+    <!-- Our Story -->
+    <story-component/>
 
-  <!-- Gallery -->
-  <gallery-component/>
+    <!-- Wedding Details -->
+    <detail-component/>
 
-  <!-- Footer -->
-  <footer-component/>
+    <!-- Gallery -->
+    <gallery-component/>
 
-  <!-- Floating elements -->
-  <floating-component/>
+    <!-- Gìt -->
+    <gift-component/>
+
+    <!-- Footer -->
+    <footer-component/>
+
+    <!-- Floating elements -->
+    <transition name="fade">
+      <floating-component/>
+    </transition>
+  </div>
 </template>
 
 <style scoped>
 @import "@/assets/style.css";
+
+.app-container {
+  position: relative;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8877a;
+}
 </style>
