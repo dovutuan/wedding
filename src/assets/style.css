@@ -159,7 +159,7 @@ html {
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .timeline-content {
-        margin-left: 50px;
+        /*margin-left: 50px;*/
     }
 
     .timeline-date {
