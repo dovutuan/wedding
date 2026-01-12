@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="vi">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" href="<%= BASE_URL %>favicon.png">
+
     <title>Tuấn Huyền - 29.03.2026 - wedding</title>
+    <meta name="description" content="Trân trọng kính mời bạn đến dự lễ cưới của Đỗ Vũ Tuấn và Lê Thị Huyền. Xem thông tin thời gian, địa điểm và những khoảnh khắc đáng nhớ của chúng tôi." />
+    <meta name="keywords" content="thiệp cưới, wedding website, lễ cưới, đám cưới, save the date, Đỗ Vũ Tuấn, Lê Thị Huyền" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tuấn Huyền - 29.03.2026 - wedding" />
+    <meta property="og:description" content="Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi. Sự hiện diện của bạn là niềm vinh hạnh lớn nhất." />
+    <meta property="og:image" content="<%= BASE_URL %>favicon.png" />
+    <meta property="og:url" content="<%= BASE_URL %>" />
+    <meta property="og:locale" content="vi_VN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tuấn Huyền - 29.03.2026 - wedding" />
+    <meta name="twitter:description" content="Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi." />
+    <meta name="twitter:image" content="https://your-domain/wedding-cover.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -27,4 +43,21 @@
 <script>
     AOS.init({duration: 500, easing: 'ease-in-out', once: true});
 </script>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Lễ cưới Đỗ Vũ Tuấn và Lê Thị Huyền",
+        "startDate": "2026-03-29",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Tư gia nhà trai",
+            "address": "xóm 5, thôn Khả Phú, xã Bình Thanh, Huyện Kiến Xương, tỉnh Thái Bình"
+        }
+    }
+</script>
+
 </html>
