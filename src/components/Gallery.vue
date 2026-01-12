@@ -22,7 +22,7 @@ const closeImage = () => {
 
 
 <template>
-  <section id="gallery" class="py-10">
+  <section id="gallery" class="py-6">
     <div class="container mx-auto px-6">
       <div class="text-center mb-14" data-aos="fade-up">
         <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Khoảnh Khắc

@@ -10,6 +10,33 @@ body {
     overflow-x: hidden;
 }
 
+.app-container {
+    position: relative;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b8877a;
+}
+
 .font-great-vibes {
     font-family: "Great Vibes", cursive;
     font-weight: 400;
@@ -48,18 +75,6 @@ body {
 /* Hero section */
 .hero-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
-}
-
-/* Timeline */
-.timeline-item:not(:last-child):after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -50px;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 50px;
-    background-color: var(--primary);
 }
 
 /* Gallery hover effect */
@@ -143,12 +158,6 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .timeline-item:not(:last-child):after {
-        left: 30px;
-        bottom: -30px;
-        height: 30px;
-    }
-
     .timeline-content {
         margin-left: 50px;
     }
@@ -483,9 +492,15 @@ html {
 
 /* Shake animation */
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
 }
 
 .shake {

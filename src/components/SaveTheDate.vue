@@ -32,16 +32,19 @@ const isWeddingDay = (day) => {
 </script>
 
 <template>
-  <section class="py-10">
+  <section class="py-6">
     <div class="container mx-auto px-6 max-w-md text-center">
       <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Save the Date</h2>
       <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
 
-      <div class="bg-secondary rounded-xl shadow p-5">
-        <div class="text-lg font-semibold uppercase mb-3">
+      <div class="bg-secondary rounded-xl shadow p-3">
+        <div class="text-2xl font-semibold mb-3">
           {{ format(weddingDate, FORMAT_WEDDING_DATE, {locale: vi}) }}
+          <br>
+          <span class="text-gray-500 text-lg">{{ WEDDING_TIME }} </span>
+          <br>
+          <span class="text-gray-500 text-lg">{{ SHORT_ADDRESS }}</span>
         </div>
-
         <div class="grid grid-cols-7 text-xs font-semibold mb-2">
           <div v-for="d in WEEK_DAYS" :key="d">{{ d }}</div>
         </div>
@@ -53,7 +56,7 @@ const isWeddingDay = (day) => {
                class="h-10 flex items-center justify-center relative rounded"
                :class="isWeddingDay(day) && 'bg-primary/10'">
             <span
-                :class="isWeddingDay(day) && 'font-bold text-red-500 border border-red-400 rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center'">{{
+                :class="isWeddingDay(day) && 'font-bold text-red-500 border border-red-500 rounded-full w-7 h-7 md:w-8 md:h-8 flex items-center justify-center'">{{
                 day
               }}</span>
 
@@ -65,11 +68,6 @@ const isWeddingDay = (day) => {
                   d="M12 21s-7.5-4.35-10-8.5C-0.5 7.5 3 3 7.5 5.5 9.24 6.46 12 9 12 9s2.76-2.54 4.5-3.5C21 3 24.5 7.5 22 12.5 19.5 16.65 12 21 12 21z"/>
             </svg>
           </div>
-        </div>
-
-        <div class="mt-2 text-lg">
-          <div class="font-semibold mt-2">{{ WEDDING_TIME }}</div>
-          <div class="text-gray-500">{{ SHORT_ADDRESS }}</div>
         </div>
       </div>
     </div>

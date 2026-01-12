@@ -23,22 +23,22 @@ defineComponent({name: 'HeaderComponent'});
 
       <div class="flex items-center justify-center space-x-6 mb-12 animate__animated animate__fadeIn animate__delay-1s">
         <div class="text-center">
-          <p class="font-playfair text-lg uppercase tracking-widest">Chú Rể</p>
-          <h3 class="text-2xl font-bold">{{ GROOM.DISPLAY }}</h3>
+          <p class="font-playfair mb-3 text-lg uppercase tracking-widest">Chú Rể</p>
+          <h3 class="text-4xl font-bold font-great-vibes">{{ GROOM.DISPLAY }}</h3>
         </div>
 
-        <div class="text-4xl font-thin">&</div>
+        <div class="text-6xl font-great-vibes">&</div>
 
         <div class="text-center">
-          <p class="font-playfair text-lg uppercase tracking-widest">Cô Dâu</p>
-          <h3 class="text-2xl font-bold">{{ BRIDE.DISPLAY }}</h3>
+          <p class="font-playfair mb-3 text-lg uppercase tracking-widest">Cô Dâu</p>
+          <h3 class="text-4xl font-bold font-great-vibes">{{ BRIDE.DISPLAY }}</h3>
         </div>
       </div>
 
       <!-- Countdown Timer -->
       <countdown-timer-component/>
 
-      <div class="animate__animated animate__fadeIn animate__delay-2s">
+      <div class="animate__animated animate__fadeIn animate__delay-3s">
         <p class="font-playfair text-xl mb-2">
           {{ format(parse(WEDDING_DATE, FORMAT_DATE, new Date()), FORMAT_WEDDING_DATE) }}
         </p>
