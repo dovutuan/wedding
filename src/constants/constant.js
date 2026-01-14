@@ -35,13 +35,13 @@ const WEDDING_LOCATIONS = [
 
 const GIFTS = [
     {
-        TITLE: `Chú rể: ${GROOM.FULL}`,
+        TITLE: `Chú rể: ${GROOM.DISPLAY}`,
         IMAGE: new URL('@/assets/images/groom.jpeg', import.meta.url).href,
         BANK_NAME: 'Techcombank',
         NUMBER: '19035439866011',
     },
     {
-        TITLE: `Cô dâu: ${BRIDE.FULL}`,
+        TITLE: `Cô dâu: ${BRIDE.DISPLAY}`,
         IMAGE: new URL('@/assets/images/groom.jpeg', import.meta.url).href,
         BANK_NAME: 'Techcombank',
         NUMBER: '19035439866011',
@@ -55,6 +55,21 @@ const FORMAT_DAY = 'dd'
 const FORMAT_MONTH = 'MMMM'
 const FORMAT_YEAR = 'yyyy'
 const WEEK_DAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
+
+const HEART_COUNT = 9
+const MOTIONS = [
+    'float-up',
+    'float-down',
+    'float-left-right',
+    'float-diagonal',
+    'pulse',
+    'float-up-soft',
+    'float-down-soft',
+    'sway-left-right',
+    'float-diagonal-soft',
+    'float-infinity',
+    'pulse-soft'
+]
 
 export {
     GROOM,
@@ -72,5 +87,8 @@ export {
     FORMAT_DAY,
     FORMAT_MONTH,
     FORMAT_YEAR,
-    WEEK_DAYS
+    WEEK_DAYS,
+
+    HEART_COUNT,
+    MOTIONS
 }

@@ -1,16 +1,60 @@
 <script setup>
-import {defineComponent} from 'vue';
+import {defineComponent, onMounted, ref} from 'vue'
+import {HEART_COUNT, MOTIONS} from '@/constants/constant';
 
 defineComponent({name: 'FloatingComponent'});
+
+const hearts = ref([])
+
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+
+onMounted(() => {
+  hearts.value = Array.from({length: HEART_COUNT}).map(() => {
+    const size = random(15, 65)
+
+    return {
+      top: `${random(5, 95)}%`,
+      left: `${random(5, 95)}%`,
+      size: `${size}px`,
+      motion: MOTIONS[random(0, MOTIONS.length - 1)],
+      duration: `${random(6, 12)}s`,
+      delay: `${random(0, 4)}s`,
+      rotateDuration: `${random(6, 10)}s`
+    }
+  })
+})
 </script>
 
 <template>
-  <div class="fixed top-1/4 left-10 w-8 h-8 bg-primary rounded-full opacity-20 float-enhanced delay-0s animate__animated animate__fadeIn">
-  </div>
-  <div class="fixed top-1/3 right-20 w-12 h-12 bg-secondary rounded-full opacity-20 float-enhanced delay-1s animate__animated animate__fadeIn animate__delay-1s" style="animation-delay: 1s;">
-  </div>
-  <div class="fixed bottom-1/4 left-1/4 w-6 h-6 bg-primary rounded-full opacity-20 float-enhanced delay-2s animate__animated animate__fadeIn animate__delay-2s" style="animation-delay: 2s;">
-  </div>
-  <div class="fixed bottom-1/3 right-1/3 w-10 h-10 bg-secondary rounded-full opacity-20 float-enhanced delay-3s animate__animated animate__fadeIn animate__delay-3s" style="animation-delay: 3s;">
+  <div
+      v-for="(heart, index) in hearts"
+      :key="index"
+      class="heart-wrapper"
+      :style="{
+      top: heart.top,
+      left: heart.left,
+      animationDuration: '5s'
+    }">
+    <div class="heart-rotate" :style="{ animationDuration: heart.rotateDuration }">
+      <div class="heart-float"
+           :style="{
+          animationName: heart.motion,
+          animationDuration: heart.duration,
+          animationDelay: heart.delay
+        }">
+        <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="text-primary"
+            :style="{ width: heart.size, height: heart.size }">
+          <path
+              d="M12 21s-7.5-4.35-10-8.5C-0.5 7.5 3 3 7.5 5.5
+               9.24 6.46 12 9 12 9s2.76-2.54 4.5-3.5
+               C21 3 24.5 7.5 22 12.5
+               19.5 16.65 12 21 12 21z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
 </template>

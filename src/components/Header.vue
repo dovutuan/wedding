@@ -18,7 +18,7 @@ defineComponent({name: 'HeaderComponent'});
 
     <div class="relative z-10 text-center px-6 text-white">
       <h1 class="font-great-vibes text-6xl md:text-8xl lg:text-9xl mb-8 animate__animated animate__fadeIn animate__delay-0.5s font-bold">
-        Kết Hôn
+        Wedding Invitation
       </h1>
 
       <div class="flex items-center justify-center space-x-6 mb-12 animate__animated animate__fadeIn animate__delay-1s">
