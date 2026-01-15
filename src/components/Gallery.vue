@@ -10,27 +10,28 @@ const showViewer = ref(false)
 const activeImage = ref(null)
 
 const openImage = (img) => {
-  activeImage.value = img
-  showViewer.value = true
+  document.body.style.overflow = 'hidden';
+  activeImage.value = img;
+  showViewer.value = true;
 }
 
 const closeImage = () => {
-  showViewer.value = false
-  activeImage.value = null
+  document.body.style.overflow = 'auto';
+  showViewer.value = false;
+  activeImage.value = null;
 }
 </script>
 
 
 <template>
-  <section id="gallery" class="py-6">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-14" data-aos="fade-up">
-        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Khoảnh Khắc
-          Đẹp</h2>
-        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
-        <p class="max-w-2xl mx-auto">Những khoảnh khắc đáng nhớ trong hành trình yêu nhau của chúng tôi</p>
-      </div>
+  <section id="gallery" class="my-16" data-aos="fade-up">
+    <div class="text-center mb-8">
+      <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-5 font-bold tracking-widest">Khoảnh Khắc Đẹp</h2>
+      <div class="w-40 h-px bg-primary mx-auto"></div>
+<!--      <p class="max-w-2xl mx-auto">Những khoảnh khắc đáng nhớ trong hành trình yêu nhau của chúng tôi</p>-->
+    </div>
 
+    <div class="container mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div v-for="(img, index) in images"
              :key="index"

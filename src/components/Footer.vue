@@ -19,6 +19,9 @@ defineComponent({name: 'FooterComponent'});
         <a href="#home" class="hover:text-primary transition-all duration-300 hover:scale-110 hover:glow relative group">Trang chủ
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
+        <a href="#save-the-date" class="hover:text-primary transition-all duration-300 hover:scale-110 hover:glow relative group">Save the Date
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+        </a>
         <a href="#story" class="hover:text-primary transition-all duration-300 hover:scale-110 hover:glow relative group">Câu chuyện
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
         </a>
@@ -35,7 +38,7 @@ defineComponent({name: 'FooterComponent'});
       </div>
 
       <div class="text-center text-sm text-gray-400 animate__animated animate__fadeIn animate__delay-3s" data-aos="fade-up" data-aos-delay="400">
-        <p>© 2025 Đám cưới {{ GROOM.SHORT }} & {{ BRIDE.SHORT }}. Thiết kế với <span class="heartbeat inline-block">❤️</span><span class="heartbeat inline-block" style="animation-delay: 0.2s;">❤️</span><span class="heartbeat inline-block" style="animation-delay: 0.4s;">❤️</span></p>
+        <p>© 2026 {{ GROOM.SHORT }} & {{ BRIDE.SHORT }} Wedding. Thiết kế với tất cả yêu thương. <span class="heartbeat inline-block">❤️</span></p>
       </div>
     </div>
   </footer>

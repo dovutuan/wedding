@@ -6,13 +6,11 @@ defineComponent({name: 'DetailComponent'});
 </script>
 
 <template>
-  <section id="detail" class="py-6">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-14" data-aos="fade-up">
-        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">Thông Tin Lễ
-          Cưới</h2>
-        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
-        <p class="max-w-2xl mx-auto">Chúng tôi rất hân hạnh được chào đón bạn đến dự lễ cưới của chúng tôi</p>
+  <section id="detail" class="my-16">
+      <div class="text-center mb-8" data-aos="fade-up">
+        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-5 font-bold tracking-widest">Thông Tin Lễ Cưới</h2>
+        <div class="w-40 h-px bg-primary mx-auto"></div>
+<!--        <p class="max-w-2xl mx-auto">Chúng tôi rất hân hạnh được chào đón bạn đến dự lễ cưới của chúng tôi</p>-->
       </div>
 
       <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -35,7 +33,7 @@ defineComponent({name: 'DetailComponent'});
             </svg>
           </div>
           <h3 class="font-playfair text-2xl mb-1">{{ location.TITLE }}</h3>
-          <p class="text-primary font-medium mb-3">{{ location.TIME }}</p>
+<!--          <p class="text-primary font-medium mb-3">{{ location.TIME }}</p>-->
           <p class="text-gray-600 mb-4 text-left">{{ location.ADDRESS }}</p>
 
           <div class="map-container mb-4 hover:shadow-xl transition-shadow duration-300">
@@ -64,6 +62,5 @@ defineComponent({name: 'DetailComponent'});
           </a>
         </div>
       </div>
-    </div>
   </section>
 </template>

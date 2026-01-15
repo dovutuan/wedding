@@ -9,12 +9,12 @@ const hasStarted = ref(false);
 const listenerOptions = {once: true, passive: true};
 
 const audios = [
-    'https://assets.cinelove.me/mp3/bbc4462f-20fb-4fe0-8b19-3a330846dca4.mp3',
-    'https://assets.cinelove.me/mp3/ab75a794-850b-46af-860c-e5db99f38239.mp3',
-    'https://assets.cinelove.me/mp3/0e470330-e4d4-4fdc-8d99-830aab66916c.mp3',
-    'https://assets.cinelove.me/mp3/6314d887-8f65-408f-b870-a2dea3dc0ce8.mp3',
-    'https://assets.cinelove.me/mp3/73be7aac-7b1d-4a55-8354-f2ea6c6d2048.mp3',
-    'https://assets.cinelove.me/mp3/5f4c5139-a13a-4ff0-82a2-e3a61240042f.mp3',
+  'https://assets.cinelove.me/mp3/bbc4462f-20fb-4fe0-8b19-3a330846dca4.mp3',
+  'https://assets.cinelove.me/mp3/ab75a794-850b-46af-860c-e5db99f38239.mp3',
+  'https://assets.cinelove.me/mp3/0e470330-e4d4-4fdc-8d99-830aab66916c.mp3',
+  'https://assets.cinelove.me/mp3/6314d887-8f65-408f-b870-a2dea3dc0ce8.mp3',
+  'https://assets.cinelove.me/mp3/73be7aac-7b1d-4a55-8354-f2ea6c6d2048.mp3',
+  'https://assets.cinelove.me/mp3/5f4c5139-a13a-4ff0-82a2-e3a61240042f.mp3',
 ];
 
 const playAudio = async () => {
@@ -26,6 +26,7 @@ const playAudio = async () => {
     await audioRef.value.play();
     isPlaying.value = true;
     hasStarted.value = true;
+    audioRef.value.volume = 0.3;
   } catch {
     addUserInteractionListeners();
   }

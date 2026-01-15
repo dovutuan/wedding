@@ -20,21 +20,19 @@ const copyAccount = async (number) => {
 </script>
 
 <template>
-  <section id="gift" class="py-6">
-    <div class="container mx-auto px-6">
-      <!-- Header -->
-      <div class="text-center mb-14" data-aos="fade-up">
-        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary mb-4 font-bold tracking-widest">
+  <section id="gift" class="my-16">
+      <div class="text-center mb-8" data-aos="fade-up">
+        <h2 class="font-great-vibes text-4xl md:text-5xl text-primary font-bold tracking-widest">
           Gửi quà mừng tới Chú Rể & Cô Dâu
         </h2>
-        <div class="w-40 h-px bg-primary mx-auto mb-6"></div>
-        <p class="max-w-2xl mx-auto text-gray-600">
-          Sự hiện diện của bạn là niềm vinh hạnh lớn nhất. Trong trường hợp không thể đến dự, bạn có thể gửi quà mừng
-          theo thông tin bên dưới.
-        </p>
+        <div class="w-40 h-px bg-primary mx-auto"></div>
+<!--        <p class="max-w-2xl mx-auto text-gray-600">-->
+<!--          Sự hiện diện của bạn là niềm vinh hạnh lớn nhất. Trong trường hợp không thể đến dự, bạn có thể gửi quà mừng-->
+<!--          theo thông tin bên dưới.-->
+<!--        </p>-->
       </div>
 
-      <!-- Gift cards -->
+    <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
         <div v-for="(gift, index) in GIFTS"
              :key="index"
@@ -51,13 +49,13 @@ const copyAccount = async (number) => {
 
           <h3 class="font-playfair text-2xl mb-3">{{ gift.TITLE }}</h3>
 
-          <div class="space-y-1 mb-4">
+          <div class="space-y-1 mb-3">
             <p class="font-medium">Ngân hàng: <span class="text-gray-700">{{ gift.BANK_NAME }}</span></p>
-            <p class="font-medium tracking-wide">STK: <span class="text-gray-700">{{ gift.NUMBER }}</span></p>
+            <p class="font-medium tracking-wide">STK: <span class="text-gray-700 font-bold">{{ gift.NUMBER }}</span></p>
           </div>
 
           <button
-              class="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition"
+              class="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-full border border-primary hover:bg-primary hover:text-white transition"
               @click="copyAccount(gift.NUMBER)">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -91,5 +89,4 @@ const copyAccount = async (number) => {
       <span>{{ toastMessage }}</span>
     </div>
   </transition>
-
 </template>
