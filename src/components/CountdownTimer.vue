@@ -101,25 +101,25 @@ onBeforeUnmount(() => {
   <div class="flex justify-center mb-8 animate__animated animate__fadeIn animate__delay-2s">
     <div class="grid grid-cols-4 gap-2 md:gap-4">
       <div class="countdown-box text-center">
-        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-flip': flipDays }]">
+        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-wobble': flipDays }]">
           <div id="days" class="countdown-number text-2xl md:text-4xl font-bold">{{ days }}</div>
           <div class="countdown-label text-xs md:text-sm">Ngày</div>
         </div>
       </div>
       <div class="countdown-box text-center">
-        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-flip': flipHours }]">
+        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-wobble': flipHours }]">
           <div id="hours" class="countdown-number text-2xl md:text-4xl font-bold">{{ hours }}</div>
           <div class="countdown-label text-xs md:text-sm">Giờ</div>
         </div>
       </div>
       <div class="countdown-box text-center">
-        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-flip': flipMinutes }]">
+        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-wobble': flipMinutes }]">
           <div id="minutes" class="countdown-number text-2xl md:text-4xl font-bold">{{ minutes }}</div>
           <div class="countdown-label text-xs md:text-sm">Phút</div>
         </div>
       </div>
       <div class="countdown-box text-center">
-        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-flip': flipSeconds }]">
+        <div :class="['countdown-item bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3 md:p-4 hover:scale-105 transition-transform duration-300', { 'countdown-wobble': flipSeconds }]">
           <div id="seconds" class="countdown-number text-2xl md:text-4xl font-bold">{{ seconds }}</div>
           <div class="countdown-label text-xs md:text-sm">Giây</div>
         </div>

@@ -13,9 +13,7 @@ import GiftComponent from '@/components/Gift.vue';
 <template>
   <div class="app-container">
     <!-- Audio Section -->
-    <transition name="fade">
-      <audio-component/>
-    </transition>
+    <audio-component/>
 
     <!-- Hero Section -->
     <header-component/>

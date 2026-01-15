@@ -1,18 +1,40 @@
+import {getDate, getMonth, getYear} from 'date-fns';
+
 const GROOM = {
     FULL: 'Đỗ Vũ Tuấn',
     DISPLAY: 'Đỗ Tuấn',
     SHORT: 'Tuấn'
-}
+};
 
 const BRIDE = {
     FULL: 'Lê Thị Huyền',
     DISPLAY: 'Lê Huyền',
     SHORT: 'Huyền'
-}
+};
 
-const WEDDING_DATE = '29/03/2026'
-const WEDDING_TIME = '12:00'
-const SHORT_ADDRESS = 'Kiến Xương, Thái Bình'
+const WEDDING_DATE = '29/03/2026';
+const WEDDING_TIME = '12:00';
+const SHORT_ADDRESS = 'Kiến Xương, Thái Bình';
+
+const WEDDING_EVENTS = {
+    ENGAGEMENT_CEREMONY: {
+        TITLE: 'Lễ Vu Quy',
+        TIME: '08:00',
+        DAY_OF_WEEK: 'Thứ Bảy',
+        DAY: getDate(WEDDING_DATE),
+        MONTH: getMonth(WEDDING_DATE) + 1,
+        YEAR: getYear(WEDDING_DATE),
+    },
+    WEDDING_CEREMONY: {
+        TITLE: 'Lễ Thành Hôn',
+        TIME: '09:00',
+        DAY_OF_WEEK: 'Thứ Bảy',
+        DAY: getDate(WEDDING_DATE),
+        MONTH: getMonth(WEDDING_DATE) + 1,
+        YEAR: getYear(WEDDING_DATE),
+    },
+};
+
 
 const WEDDING_LOCATIONS = [
     {
@@ -31,7 +53,7 @@ const WEDDING_LOCATIONS = [
         MAP_EMBED_URL: 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d352.90884550276536!2d106.47903504499988!3d20.301234904836818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1752915043090!5m2!1svi!2s',
         MAP_LINK: 'https://maps.app.goo.gl/tgfn7FeKQpySgUjo7',
     }
-]
+];
 
 const GIFTS = [
     {
@@ -46,17 +68,17 @@ const GIFTS = [
         BANK_NAME: 'Techcombank',
         NUMBER: '19035439866011',
     }
-]
+];
 
-const FORMAT_DATE = 'dd/MM/yyyy'
-const FORMAT_WEDDING_DATE = 'dd . MM . yyyy'
-const FORMAT_DATE_VI = "'ngày' dd 'tháng' MM 'năm' yyyy"
-const FORMAT_DAY = 'dd'
-const FORMAT_MONTH = 'MMMM'
-const FORMAT_YEAR = 'yyyy'
-const WEEK_DAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN']
+const FORMAT_DATE = 'dd/MM/yyyy';
+const FORMAT_WEDDING_DATE = 'dd . MM . yyyy';
+const FORMAT_DATE_VI = '\'ngày\' dd \'tháng\' MM \'năm\' yyyy';
+const FORMAT_DAY = 'dd';
+const FORMAT_MONTH = 'MMMM';
+const FORMAT_YEAR = 'yyyy';
+const WEEK_DAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
 
-const HEART_COUNT = 9
+const HEART_COUNT = 9;
 const MOTIONS = [
     'float-up',
     'float-down',
@@ -69,7 +91,7 @@ const MOTIONS = [
     'float-diagonal-soft',
     'float-infinity',
     'pulse-soft'
-]
+];
 
 export {
     GROOM,
@@ -78,6 +100,7 @@ export {
     WEDDING_TIME,
     WEDDING_LOCATIONS,
     SHORT_ADDRESS,
+    WEDDING_EVENTS,
 
     GIFTS,
 
@@ -91,4 +114,4 @@ export {
 
     HEART_COUNT,
     MOTIONS
-}
+};
