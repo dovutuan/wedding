@@ -49,7 +49,7 @@ const isWeddingDay = (day) => {
             <p>{{ BRIDE.ADDRESS }}</p>
           </div>
 
-          <div class="rounded-xl py-8 px-6">
+          <div class="rounded-xl px-6 my-auto">
             <div class="grid grid-cols-7 text-xs font-semibold mb-2">
               <div v-for="d in WEEK_DAYS" :key="d">{{ d }}</div>
             </div>
